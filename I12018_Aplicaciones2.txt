@@ -1,0 +1,7 @@
+https://codigofacilito.com/videos/tutorial_java_ee_configuracion_de_entorno_de_desarrollo
+http://www.cristalab.com/tutoriales/crear-sitios-y-aplicaciones-web-en-jsp-con-java-c74730l/
+https://www.openshift.com/
+https://xmeele.wordpress.com/2013/03/27/guia-completa-de-openshift-de-red-hat-para-principiantes-windows/
+http://personales.unican.es/corcuerp/java/Slides/Servlet_NetBeans.pdf
+https://aumakua.wordpress.com/2007/03/29/tutorial-jsp-y-bean/
+
