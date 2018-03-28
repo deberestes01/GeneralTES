@@ -1,0 +1,53 @@
+Unidad 1: Constraints
+---------
+1) Introducción
+2) Integridad de datos
+3) Constraint NOT NULL
+4) Constraint UNIQUE
+5) Constraint DEFAULT
+6) Constraint CHECK
+7) Constraint PRIMARY KEY
+8) Constraint FOREING KEY
+
+
+Unidad 2: Privilegios/Roles
+---------
+1) Introducción
+2) GRANT
+3) REVOKE
+
+
+
+Unidad 3: Indices
+---------
+1) ¿Qué son los indices?
+2) Tipos de indices
+3) Ventajas/Desventajas
+4) Creación de indices
+5) Mantenimiento de indices
+
+
+
+Unidad 4: Vistas
+---------
+1) ¿Qué son las vistas?
+2) Ventajas/Desventajas
+3) Creación de vistas
+
+
+Unidad 5: Stored Procedures
+---------
+1) ¿Qué son los procedimientos almacenados?
+2) Ventajas/Desventajas
+3) Creación de procedimientos almacenados
+4) Usando parámetros en procedimientos almacenados
+5) Manejo de errores
+
+
+Unidad 6: Triggers
+---------
+1) ¿Qué son los triggers?
+2) Ventajas/Desventajas
+3) Creación de triggers
+
+
