@@ -1,0 +1,56 @@
+﻿/*QUERY PARA OBTENER EL LISTADO DE TABLAS DE LA BASE DE DATOS.*/
+SELECT table_name
+FROM information_schema.tables
+WHERE table_schema='public' AND table_type='BASE TABLE'
+ORDER BY table_name;
+
+
+/*10/Nov/2015: QUERY PARA DESHABILITAR/HABILITAR LOS TRIGGERS DE UNA TABLA.*/
+--DESHABILITAR
+ALTER TABLE tbm_bod DISABLE TRIGGER ALL;
+ALTER TABLE tbm_emp DISABLE TRIGGER ALL;
+ALTER TABLE tbm_loc DISABLE TRIGGER ALL;
+--HABILITAR
+ALTER TABLE tbm_bod ENABLE TRIGGER ALL;
+ALTER TABLE tbm_emp ENABLE TRIGGER ALL;
+ALTER TABLE tbm_loc ENABLE TRIGGER ALL;
+
+
+/*10/Nov/2015: QUERY PARA OBTENER LAS CLAVES FORÁNEAS DE TODAS LAS TABLAS.*/
+SELECT (SELECT relname FROM pg_catalog.pg_class c LEFT JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.oid=r.conrelid) AS nombre
+,conname, pg_catalog.pg_get_constraintdef(oid, true) AS condef
+FROM pg_catalog.pg_constraint r
+WHERE r.conrelid IN (
+	SELECT c.oid
+	FROM pg_catalog.pg_class c
+	LEFT JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+	WHERE c.relname!~'pg_' AND c.relkind = 'r' AND pg_catalog.pg_table_is_visible(c.oid))
+AND r.contype='f'
+ORDER BY nombre;
+
+--ELIMINAR EL CONSTRAINT.
+ALTER TABLE tbm_loc DROP CONSTRAINT "$1";
+ALTER TABLE tbm_bod DROP CONSTRAINT "$1";
+--CREARLO CON ACTUALIZACIÓN EN CASCADA.
+ALTER TABLE tbm_loc ADD CONSTRAINT "$1" FOREIGN KEY (co_emp) REFERENCES tbm_emp(co_emp) ON UPDATE CASCADE ON DELETE NO ACTION;
+ALTER TABLE tbm_bod ADD CONSTRAINT "$1" FOREIGN KEY (co_emp) REFERENCES tbm_emp(co_emp) ON UPDATE CASCADE ON DELETE NO ACTION;
+--VAOLVER A ELIMINARLO.
+ALTER TABLE tbm_loc DROP CONSTRAINT "$1";
+ALTER TABLE tbm_bod DROP CONSTRAINT "$1";
+
+ALTER TABLE tbm_loc ADD CONSTRAINT "$1" FOREIGN KEY (co_emp) REFERENCES tbm_emp(co_emp) ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE tbm_bod ADD CONSTRAINT "$1" FOREIGN KEY (co_emp) REFERENCES tbm_emp(co_emp) ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
