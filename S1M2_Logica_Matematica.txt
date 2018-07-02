@@ -1,0 +1,109 @@
+Simbolización de proposiciones
+	Historia y clasificación
+	¿Qué es lógica matemática?
+	Proposiciones
+	Terminos de enlace
+	Simbolización de proposiciones
+	Los términos de enlace y sus símbolos
+	Agrupamiento y paréntesis
+
+Inferencia lógica
+	Introducción
+	Reglas de inferencia y demostración
+	Deducción proposicional
+	Otras reglas de inferencia
+	Proposiciones bicondicionales
+
+Certeza y validez
+	Introducción
+	Valores de certeza y terminos de enlace de certeza funcional
+	Diagramas de valores de certeza
+	Conclusiones no válidas
+	Demostración condicional
+	Consistencia
+	Demostración indirecta
+
+Tablas de certeza
+	Tablas de certeza
+	Tautologías
+	Implicación tautológica y equivalencia tautológica
+
+Terminos, predicados y cuantificadores universales
+	Introducción
+	Términos
+	Predicados
+	Nombres comunes como predicados
+	Fórmulas atómicas y variables
+	Cuantificadores universales
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tablas de verdad:
+-----------------
+1) Tabla Negación
+2) Tabla Conjunción
+3) Tabla Disyunción
+4) Tabla Proposiciones Condidionales
+5) Tabla Proposiciones Bicondicionales/Equivalencia
+6) Tautologías, Equivalencias y Contradicción
+Bibliografìa:
+-->36. Logica Matematica.pdf
+-->Introducción a La Lógica Matemática (Suppes) Pág.169
+-->Lógica matemática (Georffrey Acevedo).pdf Pág.52
+
+
+
+Leyes Lógicas/Leyes del álgebra de proposiciones:
+-------------------------
+-1) Ley del Tercio excluido
+0) Formas normales: Conjunción, disyunción
+1) Ley de la doble negación (Involución)
+2) Leyes de idempotencia
+3) Leyes asociativas
+4) Leyes conmutativas
+5) Leyes distributivas
+6) Leyes de De Morgan
+7) Leyes de Identidad
+8) Leyes de Complemento
+9) Leyes condicionales
+10) Leyes bicondicionales
+11) Leyes de absorción
+12) Leyes de transposición
+13) Leyes de exportación
+14) Modus ponens
+15) Modus Tollens
+16) Silogismo disyuntivo
+17) Inferencia equivalente
+18) Silogismo hipotético
+19) Transitividad simétrica
+20) Simplificación
+21) Adición
+Bibliografìa:
+-->36. Logica Matematica.pdf
+-->Lógica matemática (Georffrey Acevedo).pdf Pág.59
+
+
+
+
+
+
+
+
+
+
+
+
+
