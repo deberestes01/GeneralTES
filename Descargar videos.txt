@@ -1,0 +1,13 @@
+Para descargar videos:
+----------------------
+Opción 1:
+	ttps://informaqro.wordpress.com/2014/02/21/bajar-videos-de-youtube-con-todo-y-subtitulos-si-los-tiene/
+	Tenemos que sustituir el “www.” por “ss”.. si, 2 veces la letra “s” minúscula:
+	Ejemplo:
+		https://www.youtube.com/watch?v=Zh3Yz3PiXZw
+		ssyoutube.com/watch?v=Zh3Yz3PiXZw
+
+
+Para descargar subtitulos:
+--------------------------
+http://downsub.com/
