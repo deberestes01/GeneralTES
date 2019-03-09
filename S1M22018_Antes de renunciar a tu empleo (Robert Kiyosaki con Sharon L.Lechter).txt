@@ -42,7 +42,10 @@
 
 35-44
 ----
-1) . (Pág. 14-16)
-2) . (Pág. 14-16)
-3) . (Pág. 14-16)
-4) . (Pág. 14-16)
+¿Qué tipo de negocio quieres construir?.
+1) Empresarios autoempleados (Pág. 35-36)
+2) Profesionistas y personas con un oficio. (Pág. 36)
+3) Negocios de papá y mamá. (Pág. 36-37)
+4) Franquicias. (Pág. 37)
+5) Mercadeo en red y ventas directas. (Pág. 37)
+6) Empresarios creativos. (Pág. 39)
