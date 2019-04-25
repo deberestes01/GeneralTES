@@ -1,0 +1,56 @@
+    public boolean generarReporte(String rutaReporte, String nombreReporte, java.util.Map parametros, int tipoReporte)
+    {
+        boolean blnRes=true;
+        try
+        {
+            //Generar el reporte.
+            //Obtener la conexión sólo si es necesario.
+            if (con==null || con.isClosed())
+            {
+                con=DriverManager.getConnection(objParSis.getStringConexion(), objParSis.getUsuarioBaseDatos(), objParSis.getClaveBaseDatos());
+            }
+            if (con!=null)
+            {
+//                //Compilar el reporte.
+//                net.sf.jasperreports.engine.JasperReport objJasRep=net.sf.jasperreports.engine.JasperCompileManager.compileReport(rutaReporte + nombreReporte);
+                //Cargar el reporte.
+                net.sf.jasperreports.engine.JasperReport objJasRep=(net.sf.jasperreports.engine.JasperReport)net.sf.jasperreports.engine.util.JRLoader.loadObject(rutaReporte + nombreReporte);
+                //Llenar el reporte.
+                net.sf.jasperreports.engine.JasperPrint objJasPri=net.sf.jasperreports.engine.JasperFillManager.fillReport(objJasRep, parametros, con);
+                switch (tipoReporte)
+                {
+                    case 0: //Impresión directa.
+                        net.sf.jasperreports.engine.JasperPrintManager.printReport(objJasPri, false);
+                        break;
+                    case 1: //Impresión directa (Cuadro de dialogo de impresión).
+                        net.sf.jasperreports.engine.JasperPrintManager.printReport(objJasPri, true);
+                        break;
+                    case 2: //Vista preliminar.
+                        net.sf.jasperreports.view.JasperViewer.viewReport(objJasPri, false);
+                        break;
+                }
+                //Cerrar la conexión sólo si la conexión se la realizó en ésta función.
+                if (blnConRecNul)
+                {
+                    con.close();
+                    con=null;
+                }
+            }
+        }
+        catch (java.sql.SQLException e)
+        {
+            blnRes=false;
+            objUti.mostrarMsgErr_F1(this, e);
+        }
+        catch (net.sf.jasperreports.engine.JRException e)
+        {
+            blnRes=false;
+            objUti.mostrarMsgErr_F1(this, e);
+        }
+        catch (Exception e)
+        {
+            blnRes=false;
+            objUti.mostrarMsgErr_F1(this, e);
+        }
+        return blnRes;
+    }
